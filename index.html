@@ -14,19 +14,19 @@
 
 <body class="max-w-screen-xl m-auto ">
     <header class="mt-7 mb-4">
-        <nav>
+        <nav class="p-3">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <img src="./Logo.png" alt="">
                 </div>
                 <div class="">
-                    <a class="btn ">Sort by view</a>
+                    <a onclick="sortDataDescendingByViews()" class="btn md:ml-0 ml-5" id="sortByViewButton" >Sort by view</a>
                     
 
 
                 </div>
                 <div class="navbar-end">
-                    <a class="bg-[#FF1F3D]  text-white btn">Blog</a>
+                    <a onclick="Blogbtn()" class="bg-[#FF1F3D]  text-white btn">Blog</a>
                 </div>
             </div>
         </nav>
@@ -40,13 +40,17 @@
             <a class="tab tab-active">Tab 2</a>
             <a class="tab">Tab 3</a> -->
         </div>
-       <div id="cardcontainer" class="grid grid-cols-4">
+       <div id="cardcontainer" class=" grid lg:grid-cols-4 mt-5 mb-3 gap-5 lg:p-1 p-5">
        
        </div>
        
 
     </main>
-
+    <script>
+        const Blogbtn=()=>{
+            window.location.href = '../blog.html'
+        }
+       </script> 
 
 </body>
 

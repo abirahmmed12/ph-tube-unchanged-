@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="max-w-screen-xl m-auto p-7">
+        <div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+            <p style="font-weight: bold;">Q1. Discuss the scope of var, let, and const</p>
+            <p>
+                In JavaScript, the scope of variables defined using var, let, and const differs, and understanding these
+                scopes is crucial for writing maintainable and bug-free code. Here's a discussion of the scope of each of
+                these variable declarations: <br>
+
+                <span style="font-weight: bold;">1. var:</span>
+
+                <ul>
+                    <li>Function Scope: Variables declared with var are function-scoped. This means they are only accessible within
+                        the function in which they are defined, regardless of where within the function they are declared.</li>
+                    <li>Hoisting: Variables declared with var are hoisted to the top of their containing function or global scope.
+                        This means that you can access and use a var variable before it's declared in your code. However, the value
+                        assigned to it won't be hoisted; it will be initialized with undefined.</li>
+                </ul>
+
+                <span style="font-weight: bold;">2. let:</span>
+
+                <ul>
+                    <li>Block Scope: Variables declared with let are block-scoped, meaning they are confined to the nearest
+                        enclosing pair of curly braces {} (blocks), whether that's a function, loop, or condition. This enhances
+                        code readability and reduces unintended variable access and modification.</li>
+                    <li>Temporal Dead Zone (TDZ): Unlike var, variables declared with let are not hoisted to the top of the block.
+                        Instead, they are hoisted to the top of the block and remain in the "temporal dead zone" until the actual
+                        declaration. Accessing them before declaration results in a ReferenceError.</li>
+                </ul>
+
+                <span style="font-weight: bold;">3. const:</span>
+
+                <ul>
+                    <li>Block Scope: Like let, variables declared with const are block-scoped.</li>
+                    <li>Constant Value: Variables declared with const are meant to hold constant values, which means their value
+                        cannot be reassigned after declaration. However, for objects and arrays declared with const, the properties
+                        or elements can still be modified.</li>
+                    <li>Temporal Dead Zone (TDZ): const variables also have a temporal dead zone, similar to let.</li>
+                </ul>
+
+                In modern JavaScript, it is generally recommended to use let and const for variable declarations, as they
+                provide better scoping behavior and help catch programming errors early. Use let when you need to reassign a
+                variable, and use const when you want to ensure that a variable's value remains constant. Reserve var for
+                cases where you specifically need function scope behavior or are working with older codebases that rely on it.
+            </p>
+        </div>
+
+        <div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+            <p style="font-weight: bold;">Q2. Tell us the use cases of null and undefined</p>
+            <p>
+                <span style="font-weight: bold;">undefined:</span>
+
+                <ul>
+                    <li>Automatic Initialization: Variables that have been declared but haven't been assigned a value are
+                        automatically initialized with undefined. This is often used as the default value for function parameters.</li>
+                </ul>
+
+                <span style="font-weight: bold;">null:</span>
+
+                <ul>
+                    <li>Explicit Absence of Value: null is used to represent an intentional absence of any object value or value
+                        that represents "nothing" or "empty." It's often used when you want to indicate that a variable or object
+                        property should have no value.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px;">
+            <p style="font-weight: bold;">Q3. What do you mean by REST API?</p>
+            <p>
+                REST API stands for Representational State Transfer Application Programming Interface. It is a set of
+                architectural principles and constraints for designing networked applications. REST is not a specific
+                technology or protocol but rather an architectural style that uses the HTTP protocol as its foundation.
+
+                Key principles and characteristics of a REST API include:
+
+                <span style="font-weight: bold;">Statelessness:</span> Each request from a client to a server must contain all the information needed to understand
+                and process the request. The server should not rely on any stored client context. This makes REST APIs
+                scalable and easy to cache.
+
+                <span style="font-weight: bold;">Client-Server Architecture:</span> REST separates the client and server, allowing them to evolve independently.
+                This separation improves scalability, as clients and servers can be developed and scaled separately.
+
+                <span style="font-weight: bold;">Uniform Interface:</span> REST APIs have a consistent and uniform interface, typically using HTTP methods (GET,
+                POST, PUT, DELETE) and standard URIs (Uniform Resource Identifiers) to interact with resources. This
+                simplifies client-server communication.
+
+                <span style="font-weight: bold;">Resource-Based:</span> In REST, resources are the key abstractions. Each resource is identified by a unique URI,
+                and clients can perform CRUD (Create, Read, Update, Delete) operations on these resources using HTTP
+                methods.
+
+                <span style="font-weight: bold;">Representation:</span> Resources can have multiple representations, such as JSON, XML, HTML, or others. Clients can
+                request different representations based on their needs, using HTTP content negotiation.
+
+                <span style="font-weight: bold;">Stateless Communication:</span> REST APIs use stateless communication, meaning each request/response cycle is
+                independent. The server does not store any information about the client's state between requests.
+
+                <span style="font-weight: bold;">Layered System:</span> REST APIs can be designed as a layered system, where intermediaries like load balancers,
+                caches, and proxies can be placed between clients and servers without affecting the overall system's
+                functionality.
+
+                <span style="font-weight: bold;">Idempotence:</span> Certain HTTP methods in REST, such as GET and PUT, are idempotent, meaning that multiple
+                identical requests should have the same effect as a single request. This property is important for safe and
+                reliable interactions.
+
+                REST APIs are widely used for building web services, and they are the foundation for many web applications
+                and mobile app backends. They provide a standardized way
