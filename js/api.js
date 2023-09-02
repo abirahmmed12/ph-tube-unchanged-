@@ -33,8 +33,8 @@ const handleload = async (categoryid) => {
 
             const div = document.createElement('div');
             div.innerHTML = `
-                <div class="card lg:w-72 lg:h-96 bg-base-100 shadow-xl grid  ">
-                    <figure><img src=${news.thumbnail} alt="Shoes" /></figure>
+                <div class="card lg:w-72  bg-base-100 shadow-xl grid  ">
+                    <figure><img class=" md:h-52 h-48 src=${news.thumbnail} alt="Shoes" /></figure>
                     <div class="card-body">
                         <div class="flex items-center gap-3">
                             <img class="w-10 h-10 rounded-[50%] rounded-full" src=${news.authors[0].profile_picture} alt="">
@@ -45,7 +45,7 @@ const handleload = async (categoryid) => {
                                 <h1>${news.authors[0].profile_name}</h1>
                                 ${verifyIcon}
                             </div>
-                            <div class="absolute bottom-40 lg:left-32 left-[200px] border lg:w-32 w-28 text-xs bg-black bg-opacity-80 text-white">
+                            <div class="absolute bottom-40 lg:left-32  left-[200px] border lg:w-32 w-28 text-xs bg-black bg-opacity-80 text-white">
                                 ${postedTime ? `<p>${postedTime}</p>` : ''}
                             </div>
                             
