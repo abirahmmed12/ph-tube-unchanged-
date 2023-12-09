@@ -1,26 +1,21 @@
-# PHero-tube
+# Ph-Tube
 
-## [ Private Repo Link](https://classroom.github.com/a/HIPmbF3j)
+Ph-Tube is a web application developed using the DOM, offering a variety of features for an enjoyable video-watching experience. Explore videos in different categories, read related blogs, and sort videos based on views.
 
-Click here for the private repo: [https://classroom.github.com/a/HIPmbF3j](https://classroom.github.com/a/HIPmbF3j)
+## Features
 
+### 1. Category Exploration
+- Discover videos in specific categories, including:
+  - Music
+  - Comedy
+  - Drawing
 
+### 2. Blog Section
+- Engage with interesting blogs related to the videos.
+- Contribute your own blogs to share insights and experiences.
 
-# API
+### 3. Video Sorting
+- Utilize the sorting option to arrange videos based on view count.
+- Identify popular content easily.
 
-All category :  - https://openapi.programming-hero.com/api/videos/categories
-
-
-### ALL data by categoryId
-URL Format: - https://openapi.programming-hero.com/api/videos/category/${id}
-
-Example: - https://openapi.programming-hero.com/api/videos/category/1000
-
-
-## Blog Questions
-
-- Discuss the scope of `var`, `let`, and `const`
-- Tell us the use cases of `null` and `undefined`
-- What do you mean by REST API?
-
-
+live link: https://delightful-capybara-42dbc9.netlify.app/
